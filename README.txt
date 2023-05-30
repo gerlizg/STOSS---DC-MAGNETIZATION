@@ -25,6 +25,23 @@ Modules from python:
 8) Mpmath
 9) Sympy 
 
+#----------------------
+Options for the user:
+#----------------------
+N_ex1 = 100000          # Number of Spins
+option = 0              # 1: Experimental temperatures; 0: other temperature
+T = [25]                # Temperature, K. If only option = 0
+decay = 0               # 1: yes; 0 = no
+save = 1                # 1: for saving results; 0: no
+sweep_rate = 0.0035     # (T/s)
+
+If you want to try different temperature from the experimental data (T = [1.9, 2, 3, 3.5, 4, 4.5,  5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 44])
+option must be different from 1, and you need to put them inside the vector called T. 
+
+If you want to simulate decay curves, set the variable decay equal to 1, otherwise the simulator will work on hysteresis curves.
+
+If you want to save results, set the variable save equal to 1. 
+
 #------------------------------------
 Relaxation Mechanisms STOSS uses: 
 #------------------------------------
