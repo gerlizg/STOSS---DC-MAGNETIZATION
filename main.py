@@ -11,11 +11,12 @@ from changeable_field import *
 #                           SETTING PARAMETERS BY THE USER
 #-----------------------------------------------------------------------------------------------
 
-N_ex1 = 100000                     # Number of Spins
-option = 0                       # 1: Experimental temperatures; 0: other temperature
-T = [25]                        # Temperature, K. If only option = 0
-decay = 0                        # 1: yes; 0 = no
-save = 1                         # 1: for saving results; 0: no
+N_ex1 = 100000                      # Number of Spins
+option = 0                          # 1: Experimental temperatures; 0: other temperature
+T = [25]                            # Temperature, K. If only option = 0
+decay = 0                           # 1: yes; 0 = no
+save = 1                            # 1: for saving results; 0: no
+sweep_rate = 0.0035                 # (T/s)
 
 #-------------------------------------------------
 # DO NOT CHANGE THIS PART OF THE CODE
@@ -35,8 +36,9 @@ else:
 
 N_ex = int(N_ex1/configurations)+1                    # Spins for each configuration
 B_max = 5                                             # Maximun value for Magnetic Field 
-batch = 5                                             # Number of cosine cycles
-total_time = 1429 * batch 
+batch = 5                                             # Number of cycles
+time_per_batch = B_max/sweep_rate                     # s
+total_time = time_per_batch * batch                   # Timeline, s
 step = (total_time/batch)/(B_max/0.01)                # Time step
 time_steps = (int(total_time/step))                   # Total time steps
 
