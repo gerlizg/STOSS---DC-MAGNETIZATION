@@ -77,5 +77,5 @@ Shangfeng Yang(3), Zujin Shi(2), Alejandro Gaita-Ariño(1) and Eugenio Coronado(
 
 *Correspondence: zjshi@pku.edu.cn; alejandro.gaita@uv.es; eugenio.coronado@uv.es; 
 #-------------------------------------------------------------------------
-Any kind of question from this code, please contac: gerliz.gutierrez@uv.es
+Any kind of question from this code, please contact: gerliz.gutierrez@uv.es
 #-------------------------------------------------------------------------
